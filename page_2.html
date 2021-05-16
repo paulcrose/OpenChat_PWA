@@ -119,6 +119,10 @@
   document.addEventListener('visibilitychange', function() {
     if (document.visibilityState === 'hidden') {
       closeTab();
+      webRtcPhone.disconnect();
+      videoModal.classList.remove(hide);
+      chatInterface.classList.add(hide);
+      noVideoTimeout = setTimeout(noVideo, noVideoTimeoutMS);
     }
   });
   
