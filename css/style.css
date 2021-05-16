@@ -27,7 +27,7 @@
       max-width: 256px;
       height: 55vw;
       max-height: 256px; 
-      background-image: url(/images/logo_mobile.svg); 
+      background-image: url(images/logo_mobile.svg); 
       background-repeat: no-repeat; 
   }
   
@@ -43,7 +43,7 @@
   button {
       width: 40px;
       height: 40px;
-      background-image: url(/images/connect_mobile.svg); 
+      background-image: url(images/connect_mobile.svg); 
       background-repeat: no-repeat; 
       outline: none;
       border: none;
@@ -56,7 +56,7 @@
       top: calc(58% + 168px);
       left: 50%;
       transform: translate(-50%, -50%);
-      background-image: url(/images/connect_word.svg); 
+      background-image: url(images/connect_word.svg); 
       background-repeat: no-repeat;   
   }
        
@@ -88,7 +88,7 @@
       transform: translate(-50%, -50%);
       width: 256px;
       height: 320px; 
-      background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/logo.svg); 
+      background-image: url(images/logo.svg); 
       background-repeat: no-repeat; 
   }
   
@@ -106,7 +106,7 @@
   button {
       width: 112px;
       height: 32px;
-      background-image: url(/images/connect.svg); 
+      background-image: url(images/connect.svg); 
       background-repeat: no-repeat; 
       outline: none;
       border: none;
