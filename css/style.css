@@ -1,23 +1,126 @@
-body {
-  font-family: sans-serif;
-}
+@media screen and (max-width: 480px) {
 
-/* Make content area fill the entire browser window */
-html,
-.fullscreen {
-  display: flex;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-/* Center the content in the browser window */
-.container {
-  margin: auto;
-  text-align: center;
-}
-
-.title {
-  font-size: 3rem;
-}
+  /*mobile-v*/
+  
+  html {
+      height: calc(var(--rh, 1rh) * 100);
+  }
+  
+  body {
+      
+      margin: 0px;
+      padding: 0;
+      border: 0;
+      height: 100%;
+      background-color: #1e1a1a; 
+      animation: fadeInAnimation ease 1s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;  
+  }
+  
+  #logo {
+      position: absolute;
+      top: 42%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 55vw;
+      max-width: 256px;
+      height: 55vw;
+      max-height: 256px; 
+      background-image: url(images/logo_mobile.svg); 
+      background-repeat: no-repeat; 
+  }
+  
+  #connect {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: calc(58% + 120px);
+      left: 50%;
+      transform: translate(-50%, -50%);  
+  }
+  
+  button {
+      width: 40px;
+      height: 40px;
+      background-image: url(images/connect_mobile.svg); 
+      background-repeat: no-repeat; 
+      outline: none;
+      border: none;
+  } 
+  
+  #connectword {
+      position: absolute;
+      width: 68px;
+      height: 40px;
+      top: calc(58% + 168px);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url(images/connect_word.svg); 
+      background-repeat: no-repeat;   
+  }
+       
+  } 
+  
+  @media screen and (min-width: 480px)  {
+  
+  /*desktop-v*/
+  
+  html {
+      height: 100%;
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background-color: #1e1a1a;
+      animation: fadeInAnimation ease .8s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;  
+  }
+  
+  
+  #logo {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 256px;
+      height: 320px; 
+      background-image: url(images/logo.svg); 
+      background-repeat: no-repeat; 
+  }
+  
+  #connect {
+      position: absolute;
+      top: calc(58% + 160px);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 112px;
+      height: 32px;
+      margin-right: 80px;
+      margin-bottom: 72px; 
+  }
+  
+  button {
+      width: 112px;
+      height: 32px;
+      background-image: url(images/connect.svg); 
+      background-repeat: no-repeat; 
+      outline: none;
+      border: none;
+      background-color: #1e1a1a;
+      cursor: pointer; 
+  } 
+          
+  }
+  
+  @keyframes fadeInAnimation {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+       }
+  }
