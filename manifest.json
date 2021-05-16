@@ -1,6 +1,6 @@
 {
-  "name": "Hello World",
-  "short_name": "Hello",
+  "name": "OpenChat",
+  "short_name": "OpenChat",
   "icons": [{
     "src": "images/OpenChat-icon-120.png",
       "sizes": "120x120",
