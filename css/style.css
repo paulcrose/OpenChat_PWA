@@ -41,12 +41,16 @@
   }
   
   button {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    width: auto;
       width: 40px;
       height: 40px;
       background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/connect_mobile.svg); 
       background-repeat: no-repeat; 
-      outline: none;
-      border: none;
+    
   } 
   
   #connectword {
@@ -104,6 +108,8 @@
   }
   
   button {
+      -webkit-appearance: none;
+      appearance: none;
       width: 112px;
       height: 32px;
       background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/connect.svg); 
