@@ -37,7 +37,8 @@
       height: 40px;
       top: calc(58% + 120px);
       left: 50%;
-      transform: translate(-50%, -50%);  
+      transform: translate(-50%, -50%);
+     
   }
   
   button {
@@ -50,6 +51,7 @@
       height: 40px;
       background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/connect_mobile.svg); 
       background-repeat: no-repeat; 
+      background-color: transparent; 
     
   } 
   
