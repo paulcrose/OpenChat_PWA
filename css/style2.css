@@ -39,7 +39,7 @@ h1 {
 }
 
 .header {
-    display: table;
+    display: none;
     position: absolute;
     height: 80px;
     width: 100%;
@@ -128,6 +128,7 @@ h1 {
 }
 
 .chat {
+    display: none;
     float: left;
     max-height: 100%;
     min-height: 100%;
@@ -227,7 +228,7 @@ div.input-container {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #000000;
+    background-color: lightblue;
 }
 
 .video-modal .close-video {
@@ -250,12 +251,25 @@ div.input-container {
     right: 0px;
 }
 
+.localwrapper {
+    height: 100%;
+    width: 100%;
+    background-color: lightgreen;
+}
+
 .video-modal video.me {
     position: absolute;
-    width: 15%;
-    bottom: 0px;
-    right: 0px;
+    width: 25%;
+    top: 0px;
+    left: 0px;
     border: solid 1px #e6e6e6;
+}
+
+.remotewrapper {
+    display: block;
+    height: 100%;
+    width: 50%;
+    background-color: lightpink;
 }
 
 .video-modal video.remote {
@@ -342,6 +356,7 @@ div.input-container {
 }
 
 .chat-interface {
+    display: none;
     overflow: hidden;
 }
 
