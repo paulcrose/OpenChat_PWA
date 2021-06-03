@@ -259,28 +259,27 @@ div.input-container {
     width: 100%;
     max-width: 132vh;
     height: 100%;
-    
 }
 
 .video-modal video.me {
     position: absolute;
-    width: 25%;
-    top: 0px;
-    left: 0px;
-    border: solid 1px #e6e6e6;
+    margin-top: 10vh;
+    width: 19vh;
+    height: 19vh;   
+    object-fit: cover;
+    border-radius: 24px;
 }
 
 .remotewrapper {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
-
+    height: 100%;
+    width: 100%;
 }
 
 .video-modal video.remote {
-    display: block;
-    height: 100%;
-    max-width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
     margin: auto;
     object-fit: cover;
     border-radius: 24px;
