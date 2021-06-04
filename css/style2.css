@@ -90,15 +90,15 @@ h1 {
 }
 
 .online-list {
-    
-    width: 250px;
-    height: 100%;
-    overflow-y: scroll;
-    position: absolute;
-    right: 0;
-    box-sizing: border-box;
-    padding-top: 80px;
-    background-color: #1E2531;
+    position: relative;
+    z-index: 3;
+    margin-left: auto;
+    margin-right: 7.5vh;
+    margin-top: 10vh;
+    width: 28.5vh;
+    height: 50vh;  
+    background-color: #2b2727; 
+    border-radius: 24px;  
 }
 
 .online-list div {
