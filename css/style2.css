@@ -243,16 +243,24 @@ div.input-container {
 
 .video-modal .close-video {
     position: absolute;
-    display: flex;
-    border-radius: 50%;
-    background-color: #363D48;
-    fill: #6D7582;
-    padding: 1%;
-    right: 1%;
-    top: 1%;
-    cursor: pointer;
+    width: 40px;
+    height: 40px;
     z-index: 1;
 }
+
+button {
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    width: auto;
+      width: 40px;
+      height: 40px;
+      background-image: url(/images/exit_mobile.svg); 
+      background-repeat: no-repeat; 
+      background-color: transparent; 
+} 
 
 .video-modal img {
     position: absolute;
@@ -445,6 +453,32 @@ div.input-container {
         background-color: #2b2727; 
     }
 
+    .navwrapper .close-video {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin-bottom: 8vw;
+        width: 40px;
+        height: 12vw; 
+        min-height: 40px;
+        z-index: 1;
+    }
+    
+    button {
+        cursor: pointer;
+        -webkit-appearance: none;
+        appearance: none;
+        outline: none;
+        border: none;
+        width: auto;
+          width: 40px;
+          height: 40px;
+          background-image: url(/images/exit_mobile.svg); 
+          background-repeat: no-repeat; 
+          background-color: transparent; 
+        
+    } 
 
 }
 
