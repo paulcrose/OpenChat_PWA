@@ -22,6 +22,8 @@ const callFromSpan = document.getElementById('call-from');
 const acceptCallButton = document.getElementById('accept-call');
 const rejectCallButton = document.getElementById('reject-call');
 
+const exitConfirmModal = document.getElementById('exit-confirm-modal');
+
 const onlineList = document.getElementById('online-list');
 const chat = document.getElementById('chat');
 const log = document.getElementById('log');
@@ -140,6 +142,7 @@ const initWebRtcApp = () => {
     const onDisconnect = () => {
         console.log('Call disconnected');
         videoModal.classList.add(hide);
+        exitConfirmModal.classList.remove(hide);
         chatInterface.classList.remove(hide);
         clearTimeout(noVideoTimeout);
     };
