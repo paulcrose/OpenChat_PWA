@@ -23,6 +23,8 @@ const acceptCallButton = document.getElementById('accept-call');
 const rejectCallButton = document.getElementById('reject-call');
 
 const exitConfirmModal = document.getElementById('exit-confirm-modal');
+const exitButton = document.getElementById('yes-exit');
+const noExitButton = document.getElementById('no-exit');
 
 const onlineList = document.getElementById('online-list');
 const chat = document.getElementById('chat');
@@ -78,6 +80,7 @@ getLocalStream().then((localMediaStream) => {
 getLocalUserName().then((myUsername) => {
     username = myUsername;
     usernameModal.classList.add(hide);
+    joinButton.classList.remove(disabled);
     initWebRtcApp();
 });
 
@@ -93,15 +96,27 @@ messageInput.addEventListener('keydown', (event) => {
 // Send a chat message when the submit button is clicked
 submit.addEventListener('click', sendMessage);
 
+const exitConfirmEventHandler = (event) => {
+    exitConfirmModal.classList.remove(hide);
+}
+
 const closeVideoEventHandler = (event) => {
+    exitConfirmModal.classList.add(hide);
     videoModal.classList.add(hide);
     chatInterface.classList.remove(hide);
     clearTimeout(noVideoTimeout);
     webRtcPhone.disconnect(); // disconnects the current phone call
 }
 
+const noCloseVideoEventHandler = (event) => {
+    exitConfirmModal.classList.add(hide);
+}
+
 // Register a disconnect event handler when the close video button is clicked
-closeVideoButton.addEventListener('click', closeVideoEventHandler);
+closeVideoButton.addEventListener('click', exitConfirmEventHandler);
+
+exitButton.addEventListener('click', closeVideoEventHandler);
+noExitButton.addEventListener('click', noCloseVideoEventHandler);
 
 const initWebRtcApp = () => {
     // WebRTC phone object event for when the remote peer's video becomes available.
@@ -142,7 +157,6 @@ const initWebRtcApp = () => {
     const onDisconnect = () => {
         console.log('Call disconnected');
         videoModal.classList.add(hide);
-        exitConfirmModal.classList.remove(hide);
         chatInterface.classList.remove(hide);
         clearTimeout(noVideoTimeout);
     };
