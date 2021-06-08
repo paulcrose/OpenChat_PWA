@@ -323,6 +323,7 @@ function incomingCall(name) {
 function confirmCall(name) {
     return new Promise((resolve) => {
         yesCallButton.onclick = function() {
+            remoteVideo.classList.remove(hide);
             callConfirmModal.classList.add(hide);
             resolve(true);
         }
