@@ -102,7 +102,7 @@ const exitConfirmEventHandler = (event) => {
 
 const closeVideoEventHandler = (event) => {
     exitConfirmModal.classList.add(hide);
-    videoModal.classList.add(hide);
+    remoteVideo.classList.add(hide);
     chatInterface.classList.remove(hide);
     clearTimeout(noVideoTimeout);
     webRtcPhone.disconnect(); // disconnects the current phone call
@@ -156,7 +156,7 @@ const initWebRtcApp = () => {
     // WebRTC phone object event for when a call disconnects or timeouts.
     const onDisconnect = () => {
         console.log('Call disconnected');
-        videoModal.classList.add(hide);
+        remoteVideo.classList.add(hide);
         chatInterface.classList.remove(hide);
         clearTimeout(noVideoTimeout);
     };
