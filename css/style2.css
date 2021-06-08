@@ -13,6 +13,7 @@ body {
     bottom: 0px;
     left: 0px;
     right: 0px;
+    background-color: #6D7582;
 }
 
 body > div {
@@ -242,11 +243,23 @@ div.input-container {
     pointer-events: none;
 }
 
-.video-modal .close-video {
+/*.video-modal .close-video {
     position: absolute;
     width: 40px;
     height: 40px;
     z-index: 1;
+}*/
+
+.navwrapper .close-video {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: calc(90vh - 40px);
+        margin-right: 7.5vh;
+        width: 40px;
+        height: 40px; 
+        min-height: 40px;
+        z-index: 1;
 }
 
 button {
@@ -295,6 +308,19 @@ button {
     width: 100%;
     z-index: 3;
     pointer-events: none;
+}
+
+#background {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: auto;
+    object-fit: cover;
+    border-radius: 24px;
+    margin-top: 10vh;
+    width: 85vh;
+    height: 80vh;
+    background-color: #333333;
 }
 
 .video-modal video.remote {
@@ -398,6 +424,10 @@ button {
     html, body {
         font-size: 16px;
         background-color: #6D7582;
+    }
+
+    #background {
+        display: none;
     }
 
     .localwrapper {

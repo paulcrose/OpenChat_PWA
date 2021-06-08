@@ -102,6 +102,7 @@ const exitConfirmEventHandler = (event) => {
 const closeVideoEventHandler = (event) => {
     exitConfirmModal.classList.add(hide);
     remoteVideo.classList.add(hide);
+    closeVideoButton.classList.add(hide);
     chatInterface.classList.remove(hide);
     clearTimeout(noVideoTimeout);
     webRtcPhone.disconnect(); // disconnects the current phone call
