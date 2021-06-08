@@ -324,6 +324,7 @@ function confirmCall(name) {
         yesCallButton.onclick = function() {
             remoteVideo.classList.remove(hide);
             callConfirmModal.classList.add(hide);
+            closeVideoButton.classList.remove(hide);
             resolve(true);
         }
 
