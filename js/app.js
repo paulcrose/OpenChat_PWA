@@ -80,7 +80,6 @@ getLocalStream().then((localMediaStream) => {
 getLocalUserName().then((myUsername) => {
     username = myUsername;
     usernameModal.classList.add(hide);
-    joinButton.classList.remove(disabled);
     initWebRtcApp();
 });
 
