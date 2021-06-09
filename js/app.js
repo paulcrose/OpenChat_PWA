@@ -137,7 +137,7 @@ const initWebRtcApp = () => {
                 // End an already open call before opening a new one
                 //webRtcPhone.disconnect();
                 videoModal.classList.remove(hide);
-                chatInterface.classList.add(hide);
+                //chatInterface.classList.add(hide);
                 noVideoTimeout = setTimeout(noVideo, noVideoTimeoutMS);
             }
 
@@ -311,6 +311,8 @@ function incomingCall(name) {
             background.classList.add(hide);
             remoteVideo.classList.remove(hide);
             incomingCallModal.classList.add(hide);
+            closeVideoButton.classList.remove(hide);
+            chatInterface.classList.remove(hide);
             resolve(true);
         }
 
