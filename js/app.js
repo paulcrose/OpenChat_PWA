@@ -135,7 +135,7 @@ const initWebRtcApp = () => {
         incomingCall(username).then((acceptedCall) => {
             if (acceptedCall) {
                 // End an already open call before opening a new one
-                webRtcPhone.disconnect();
+                //webRtcPhone.disconnect();
                 videoModal.classList.remove(hide);
                 chatInterface.classList.add(hide);
                 noVideoTimeout = setTimeout(noVideo, noVideoTimeoutMS);
@@ -150,7 +150,7 @@ const initWebRtcApp = () => {
         console.log('Call response: ', acceptedCall ? 'accepted' : 'rejected');
         if (acceptedCall) {
             videoModal.classList.remove(hide);
-            chatInterface.classList.add(hide);
+            //chatInterface.classList.add(hide);
             noVideoTimeout = setTimeout(noVideo, noVideoTimeoutMS);
         }
     };
