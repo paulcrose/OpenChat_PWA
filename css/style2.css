@@ -5,8 +5,10 @@ body {
     height: 100%;
     margin: 0px;
     overflow: hidden;
-    font-family: sans-serif;
-    font-size: 20px;
+    font-family: rooney-sans, sans-serif;
+    font-weight: 200;
+    font-size: 22px;
+    letter-spacing: 1.5px;
     color: #e6e6e6;
     position: fixed;
     top: 0px;
@@ -35,6 +37,7 @@ h1 {
     font-size: 30px;
 }
 
+
 .hide {
     display: none;
 }
@@ -46,7 +49,6 @@ h1 {
     width: 100%;
     box-sizing: border-box;
     text-align: left;
-    font-weight: bold;
     border-bottom: solid 1px #FFFFFF;
     z-index: 1;
     color: #FFFFFF;
@@ -343,48 +345,73 @@ button {
     z-index: 4;
 }
 
+.modal-spacer {
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    
+}
+
 .user-input-modal h3 {
-    margin: 15px auto;
+    font-weight: 200;
+    margin-top: 72px;
+    margin-bottom: 0px;
+    color: #25C8FF;
 }
 
 .user-input-modal p {
-    margin: 0px auto 20px auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 64px;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 200;
 }
 
 .user-input-modal {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 400px;
-    min-width: 300px;
+    width: 456px;
+    height: 448px;
     overflow: hidden;
     margin: auto;
-    padding: 15px;
+    padding: 0px;
     box-sizing: border-box;
     background-color: #363D48;
-    border: solid 1px #e6e6e6;
-    border-radius: 8px;
-    color: #FFFFFF;
+    border-radius: 24px;
+    color: #D5D4D4;
     text-align: center;
 }
 
 .user-input-modal .modal-button {
-    display: inline-block;
-    width: 100px;
-    margin: 0px 10px 20px 10px;
+    
+    width: auto;
+    margin-left: 32%;
+    margin-right: 32%;
+    margin-top: 64px;
+    margin-bottom: 0;
     padding: 5px;
     box-sizing: border-box;
-    background-color: #101620;
-    color: #e6e6e6;
-    border: solid 1px #6D7582;
-    border-radius: 3px;
+    background-color: #DEFD9B;
+    color: #2B2727;
+    background-repeat: no-repeat; 
+    outline: none;
+    border: none;
+    border-radius: 8px;
     user-select: none;
     cursor: pointer;
+    font-size: 18px;
+    font-weight: 200;
 }
 
 .user-input-modal .modal-button:hover {
-    color: #FFFFFF;
-    border: solid 1px #e6e6e6;
+    color: #2B2727;
 }
 
 .user-input-modal .modal-button.disabled {
@@ -392,21 +419,24 @@ button {
 }
 
 .user-input-modal .modal-button.disabled:hover {
-    color: #e6e6e6;
+    color: #2B2727;
     border: solid 1px #6D7582;
 }
 
 .user-input-modal .modal-text-input {
-    width: 80%;
+    width: 50%;
     padding: 0px 5px;
-    margin: 0px auto 20px auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 24px;
+    margin-bottom: 0;
     line-height: 24pt;
     outline: none;
     font-size: 14px;
-    border: solid 1px #e6e6e6;
-    background-color: #6D7582;
-    border-radius: 3px;
-    color: #FFFFFF;
+    border-style: hidden;
+    background-color: #D5D4D4;
+    border-radius: 8px;
+    color: #2B2727;
     font-family: inherit;
     text-align: center;
 }
@@ -518,39 +548,34 @@ button {
         
     } 
 
+    .modal-spacer {
+            position: absolute;
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            width: 100%;
+            height: 100%;
+            max-height: 154vw;
+            
+    }
+
+    .user-input-modal {
+        position: absolute;
+        bottom: 0%;
+        transform: translateY(-0%);
+        margin-bottom: 26vw;
+        width: 100%;
+        height: 96vw;
+        min-height: 96vw;   
+        overflow: hidden;
+        padding: 0px;
+        box-sizing: border-box;
+        background-color: #363D48;
+        border-radius: 24px;
+        color: #D5D4D4;
+        text-align: center;
+    }
+
 }
 
-@media only screen and (max-width: 450px) {
-    .online-list,
-    .header .right,
-    .header .left {
-        
-    }
-
-    .chat {
-        left: 100px;
-        padding-left: 100px;
-    }
-
-    div.input-container {
-        height: 75px;
-        padding-right: 100px;
-    }
-
-    .log {
-        margin-bottom: 75px;
-    }
-
-    .input-container .submit {
-        right: 100px;
-    }
-
-    .online-list img {
-        height: 75%;
-        margin: 6px 0px;
-    }
-
-    .video-modal .close-video {
-        padding: 4%;
-    }
-}

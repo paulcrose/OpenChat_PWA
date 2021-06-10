@@ -5,6 +5,7 @@
   <title>OpenChat</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="https://use.typekit.net/yqb1veu.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="images/OpenChat-icon-152.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,19 +19,22 @@
 <body>
 
   <div id="username-input-modal" class="modal-background">
+    <div class="modal-spacer">
       <div class="user-input-modal">
-        <h3 id="welcome">Welcome Guest</h3>
+        <h3 id="welcome">Welcome to OpenChat</h3>
            <p id="phrase">
-              Input a username, 16 characters or fewer
+              Please enter a username
           </p>
           <input id="username-input" type="text" maxlength="16" class="modal-text-input">
-          <div id="join-button" class="modal-button disabled">
+          <div id="join-button" class="modal-button ">
               Join Chat
           </div>
       </div>
+    </div>
   </div>
 
   <div id="incoming-call-modal" class="modal-background hide">
+    <div class="modal-spacer">
       <div class="user-input-modal">
           <h3>Incoming Call</h3>
           <p>
@@ -43,9 +47,11 @@
               Reject
           </div>
       </div>
+    </div>
   </div>
 
   <div id="call-confirm-modal" class="modal-background hide">
+    <div class="modal-spacer">
       <div class="user-input-modal">
           <h3>Video Call</h3>
           <p>
@@ -58,10 +64,12 @@
               No
           </div>
       </div>
+    </div>
   </div>
 
   <div id="exit-confirm-modal" class="modal-background hide">
-    <div class="user-input-modal">
+    <div class="modal-spacer">
+      <div class="user-input-modal">
         <h3>Exit Call</h3>
         <p>
             
@@ -72,6 +80,7 @@
         <div id="no-exit" class="modal-button">
             No
         </div>
+      </div>
     </div>
 </div>
 
@@ -83,7 +92,7 @@
       </div>
       <div class="localwrapper">
       <video class="me" id="my-video" playsinline autoplay muted poster="images/person_2.jpg"></video>
-      <img class="hide" id="broken-my-video" src="./broken-camera.png">
+
       </div>
   </div>
 
