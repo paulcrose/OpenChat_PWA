@@ -255,13 +255,6 @@ div.input-container {
     pointer-events: none;
 }
 
-/*.video-modal .close-video {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    z-index: 1;
-}*/
-
 .navwrapper .close-video {
         position: absolute;
         top: 0;
@@ -393,7 +386,7 @@ button {
     text-align: center;
 }
 
-.user-input-modal .modal-button {
+#join-button {
     position: absolute;
     width: auto;
     height: 40px;
@@ -412,17 +405,46 @@ button {
     font-weight: 200;
 }
 
-.user-input-modal .modal-button:hover {
+#yes-call, #yes-exit {
+    position: absolute;
+    width: auto;
+    height: 40px;
+    top: 66%;
+    left: calc(50% - 100px);
+    transform: translateX(-50%);
+    background-color: #DEFD9B;
     color: #2B2727;
+    background-repeat: no-repeat; 
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+#no-call, #no-exit {
+    position: absolute;
+    width: auto;
+    height: 40px;
+    top: 66%;
+    left: calc(50% + 100px);
+    transform: translateX(-50%);
+    background-color: #FF3B4D;
+    color: #2B2727;
+    background-repeat: no-repeat; 
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 200;
 }
 
 .user-input-modal .modal-button.disabled {
     opacity: 0.2;
-}
-
-.user-input-modal .modal-button.disabled:hover {
-    color: #2B2727;
-    border: solid 1px #6D7582;
 }
 
 .user-input-modal .modal-text-input {
@@ -601,7 +623,7 @@ button {
         text-align: center;
     }
 
-    .user-input-modal .modal-button {
+    #join-button {
         position: absolute;
         width: auto;
         height: 40px;
@@ -610,6 +632,44 @@ button {
         transform: translateX(-50%);
         margin-top: 64px;
         background-color: #DEFD9B;
+        color: #2B2727;
+        background-repeat: no-repeat; 
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        user-select: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 200;
+    }
+
+    #yes-call, #yes-exit {
+        position: absolute;
+        width: auto;
+        height: 40px;
+        top: 50%;
+        left: calc(50% - 80px);
+        transform: translateX(-50%);
+        background-color: #DEFD9B;
+        color: #2B2727;
+        background-repeat: no-repeat; 
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        user-select: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 200;
+    }
+    
+    #no-call, #no-exit {
+        position: absolute;
+        width: auto;
+        height: 40px;
+        top: 50%;
+        left: calc(50% + 80px);
+        transform: translateX(-50%);
+        background-color: #FF3B4D;
         color: #2B2727;
         background-repeat: no-repeat; 
         outline: none;
