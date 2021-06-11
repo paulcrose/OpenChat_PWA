@@ -32,11 +32,15 @@ body > div {
     display: inline;
 }
 
-h1 {
-    margin: 0px;
-    font-size: 30px;
+h3 {
+    position: absolute;
+    width: 100%;
+    font-weight: 200;
+    margin-top: 24px;
+    margin-bottom: 0px;
+    color: #25C8FF;
+    text-align: center;
 }
-
 
 .hide {
     display: none;
@@ -111,23 +115,29 @@ h1 {
     width: 28.5vh;
     height: 50vh;  
     background-color: #2b2727; 
-    border-radius: 24px;  
+    border-radius: 24px;
+    
+}
+
+.online-list h3 {
+    font-size: 18px;
 }
 
 .online-list div {
     width: 100%;
     height: 60px;
+    margin-left: auto;
+    transform: translateY(100%);
     text-align: left;
-    background-color: #101620;
+    background-color: transparent;
     box-sizing: border-box;
     cursor: pointer;
-    border-bottom: solid 1px #6D7582;
 }
 
 .online-list img {
     height: 100%;
     border-radius: 50%;
-    float: left;
+    float: right;
     margin-right: 10px;
     padding: 10px;
     box-sizing: border-box;
@@ -357,12 +367,6 @@ button {
     
 }
 
-.user-input-modal h3 {
-    font-weight: 200;
-    margin-top: 72px;
-    margin-bottom: 0px;
-    color: #25C8FF;
-}
 
 .user-input-modal p {
     margin-left: 0;
@@ -390,14 +394,12 @@ button {
 }
 
 .user-input-modal .modal-button {
-    
+    position: absolute;
     width: auto;
-    margin-left: 32%;
-    margin-right: 32%;
-    margin-top: 64px;
-    margin-bottom: 0;
-    padding: 5px;
-    box-sizing: border-box;
+    height: 40px;
+    top: 66%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #DEFD9B;
     color: #2B2727;
     background-repeat: no-repeat; 
@@ -424,13 +426,13 @@ button {
 }
 
 .user-input-modal .modal-text-input {
+    position: absolute;
     width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 0px 5px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 24px;
-    margin-bottom: 0;
-    line-height: 24pt;
+    line-height: 40px;
     outline: none;
     font-size: 14px;
     border-style: hidden;
@@ -447,8 +449,19 @@ button {
 }
 
 @media only screen and (max-width: 700px) {
+
     h1 {
         font-size: 20px
+    }
+
+    h3 {
+        position: absolute;
+        width: 100%;
+        font-weight: 200;
+        margin-top: 12%;
+        margin-bottom: 0px;
+        color: #25C8FF;
+        text-align: center;
     }
 
     html, body {
@@ -520,6 +533,17 @@ button {
         border-radius: 24px; 
         background-color: #2b2727; 
     }
+
+    .online-list div {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin-left: auto;
+        transform: translateY(20vw);
+        text-align: left;
+        background-color: transparent;
+        cursor: pointer;
+    }
     
     .navwrapper .close-video {
         position: absolute;
@@ -575,6 +599,26 @@ button {
         border-radius: 24px;
         color: #D5D4D4;
         text-align: center;
+    }
+
+    .user-input-modal .modal-button {
+        position: absolute;
+        width: auto;
+        height: 40px;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 64px;
+        background-color: #DEFD9B;
+        color: #2B2727;
+        background-repeat: no-repeat; 
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        user-select: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 200;
     }
 
 }
