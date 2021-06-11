@@ -15,7 +15,7 @@ body {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background-color: #6D7582;
+    background-color: #1e1a1a;
 }
 
 body > div {
@@ -116,7 +116,6 @@ h3 {
     height: 50vh;  
     background-color: #2b2727; 
     border-radius: 24px;
-    
 }
 
 .online-list h3 {
@@ -325,7 +324,7 @@ button {
     margin-top: 10vh;
     width: 85vh;
     height: 80vh;
-    background-color: #333333;
+    background-color: #2b2727;
 }
 
 .video-modal video.remote {
@@ -344,7 +343,7 @@ button {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(30, 26, 26, 0.7);
     z-index: 4;
 }
 
@@ -380,7 +379,7 @@ button {
     margin: auto;
     padding: 0px;
     box-sizing: border-box;
-    background-color: #363D48;
+    background-color: #2b2727;
     border-radius: 24px;
     color: #D5D4D4;
     text-align: center;
@@ -488,7 +487,7 @@ button {
 
     html, body {
         font-size: 16px;
-        background-color: #6D7582;
+        background-color: #1e1a1a;
     }
 
     #background {
@@ -617,7 +616,7 @@ button {
         overflow: hidden;
         padding: 0px;
         box-sizing: border-box;
-        background-color: #363D48;
+        background-color: #2b2727;
         border-radius: 24px;
         color: #D5D4D4;
         text-align: center;
