@@ -270,7 +270,7 @@ div.input-container {
     pointer-events: none;
 }
 
-.close-video {
+/*.close-video {
         position: absolute;
         top: 0;
         right: 0;
@@ -280,7 +280,7 @@ div.input-container {
         height: 40px; 
         min-height: 40px;
         z-index: 1;
-}
+}*/
 
 button {
     cursor: pointer;
@@ -615,8 +615,7 @@ button {
         position: absolute;
         width: 40px;
         height: 40px;
-        bottom: 0;
-        margin-bottom: 8vw;
+        top: 0;
         left: 50%;
         transform: translate(-50%, 0%);
     }
