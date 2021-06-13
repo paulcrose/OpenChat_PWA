@@ -26,8 +26,6 @@ const exitConfirmModal = document.getElementById('exit-confirm-modal');
 const exitButton = document.getElementById('yes-exit');
 const noExitButton = document.getElementById('no-exit');
 
-const background = document.getElementById('background');
-
 const onlineList = document.getElementById('online-list');
 const chat = document.getElementById('chat');
 const log = document.getElementById('log');
@@ -104,7 +102,7 @@ const exitConfirmEventHandler = (event) => {
 const closeVideoEventHandler = (event) => {
     exitConfirmModal.classList.add(hide);
     remoteVideo.classList.add(hide);
-    closeVideoButton.classList.add(hide);
+    //closeVideoButton.classList.add(hide);
     chatInterface.classList.remove(hide);
     clearTimeout(noVideoTimeout);
     webRtcPhone.disconnect(); // disconnects the current phone call
@@ -308,10 +306,9 @@ function renderMessage(message) {
 function incomingCall(name) {
     return new Promise((resolve) => {
         acceptCallButton.onclick = function() {
-            background.classList.add(hide);
             remoteVideo.classList.remove(hide);
             incomingCallModal.classList.add(hide);
-            closeVideoButton.classList.remove(hide);
+            //closeVideoButton.classList.remove(hide);
             chatInterface.classList.remove(hide);
             resolve(true);
         }
@@ -331,7 +328,7 @@ function confirmCall(name) {
         yesCallButton.onclick = function() {
             remoteVideo.classList.remove(hide);
             callConfirmModal.classList.add(hide);
-            closeVideoButton.classList.remove(hide);
+            //closeVideoButton.classList.remove(hide);
             resolve(true);
         }
 
