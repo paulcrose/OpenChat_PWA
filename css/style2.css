@@ -297,7 +297,7 @@ button {
     width: 100%;
     max-width: 132vh;
     height: 100%;
-    z-index: 3;
+    z-index: 2;
 }
 
 .video-modal video.me {
@@ -313,7 +313,7 @@ button {
     position: absolute;
     height: 100%;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
     pointer-events: none;
 }
 
@@ -616,7 +616,7 @@ button {
         width: 40px;
         height: 40px;
         bottom: 0;
-        margin-bottom: 10vw;
+        margin-bottom: 8vw;
         left: 50%;
         transform: translate(-50%, 0%);
         z-index: 1;
