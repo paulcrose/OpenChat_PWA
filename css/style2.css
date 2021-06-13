@@ -447,7 +447,7 @@ button {
     border: none;
     user-select: none;
     cursor: pointer;
-    background-image: url(/images/accept.svg);
+    background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/accept.svg);
 }
 
 #reject-call {
@@ -463,7 +463,7 @@ button {
     border: none;
     user-select: none;
     cursor: pointer;
-    background-image: url(/images/reject.svg);
+    background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/reject.svg);
 }
 
 .user-input-modal .modal-button.disabled {
@@ -611,7 +611,7 @@ button {
         width: auto;
           width: 40px;
           height: 40px;
-          background-image: url(/images/hangup.svg); 
+          background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/hangup.svg); 
           background-repeat: no-repeat; 
           background-color: transparent; 
         
@@ -658,7 +658,7 @@ button {
         border: none;
         user-select: none;
         cursor: pointer;
-        background-image: url(/images/join.svg); 
+        background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/join.svg); 
         background-repeat: no-repeat; 
         background-color: transparent; 
     }
@@ -675,7 +675,7 @@ button {
         border: none;
         user-select: none;
         cursor: pointer;
-        background-image: url(/images/yes.svg);
+        background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/yes.svg);
     }
     
     #no-call, #no-exit {
@@ -690,7 +690,7 @@ button {
         border: none;
         user-select: none;
         cursor: pointer;
-        background-image: url(/images/no.svg);
+        background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/no.svg);
     }
 
     #accept-call {
@@ -705,7 +705,7 @@ button {
         border: none;
         user-select: none;
         cursor: pointer;
-        background-image: url(/images/accept.svg);
+        background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/accept.svg);
     }
     
     #reject-call {
@@ -720,7 +720,7 @@ button {
         border: none;
         user-select: none;
         cursor: pointer;
-        background-image: url(/images/reject.svg);
+        background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/reject.svg);
     }
 
 }

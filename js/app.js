@@ -397,7 +397,7 @@ function createUserListItem(userId, name) {
     div.id = userId;
 
     const img = document.createElement('img');
-    img.src = '/images/call.svg';
+    img.src = 'https://paulcrose.github.io/OpenChat_PWA/images/call.svg';
 
     const span = document.createElement('span');
     span.innerHTML = name;
