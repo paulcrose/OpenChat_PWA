@@ -15,7 +15,7 @@ body {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background-color: #6D7582;
+    background-color: #1E1A1A;
 }
 
 body > div {
@@ -36,12 +36,11 @@ h3 {
     position: absolute;
     width: 100%;
     font-weight: 200;
-    margin-top: 24px;
+    margin-top: 48px;
     margin-bottom: 0px;
     color: #25C8FF;
     text-align: center;
 }
-
 
 .hide {
     display: none;
@@ -121,12 +120,13 @@ h3 {
 }
 
 .online-list h3 {
-    font-size: 18px;
+    margin-top: 24px;
+    font-size: 22px;
 }
 
 .online-list div {
     width: 100%;
-    height: 60px;
+    height: 80px;
     margin-left: auto;
     transform: translateY(100%);
     text-align: left;
@@ -136,11 +136,11 @@ h3 {
 }
 
 .online-list img {
-    height: 100%;
+    width: 40px;
+    height: 40px;
     float: right;
-    margin-right: 10px;
-    padding: 10px;
-    box-sizing: border-box;
+    margin-right: 40px;
+    margin-top: 20px;
     background-color: transparent;
 }
 
@@ -150,6 +150,8 @@ h3 {
     top: 50%;
     transform: translateY(-50%);
     word-break: break-all;
+    font-size: 20px;
+    padding-left: 40px;
 }
 
 .chat {
@@ -256,7 +258,7 @@ div.input-container {
     pointer-events: none;
 }
 
-/*.close-video {
+.close-video {
         position: absolute;
         top: 0;
         right: 0;
@@ -266,7 +268,7 @@ div.input-container {
         height: 40px; 
         min-height: 40px;
         z-index: 1;
-}*/
+}
 
 button {
     cursor: pointer;
@@ -325,7 +327,7 @@ button {
     margin-top: 10vh;
     width: 85vh;
     height: 80vh;
-    background-color: #333333;
+    background-color: #2b2727;;
 }
 
 .video-modal video.remote {
@@ -364,9 +366,9 @@ button {
 .user-input-modal p {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 64px;
+    margin-top: 132px;
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 200;
 }
 
@@ -380,7 +382,7 @@ button {
     margin: auto;
     padding: 0px;
     box-sizing: border-box;
-    background-color: #363D48;
+    background-color: #2b2727;
     border-radius: 24px;
     color: #D5D4D4;
     text-align: center;
@@ -502,6 +504,7 @@ button {
     h3 {
         position: absolute;
         width: 100%;
+        font-size: 22px;
         font-weight: 200;
         margin-top: 12%;
         margin-bottom: 0px;
@@ -511,7 +514,7 @@ button {
 
     html, body {
         font-size: 16px;
-        background-color: #6D7582;
+        background-color: #1E1A1A;
     }
 
     #background {
@@ -566,7 +569,6 @@ button {
         height: 100%;
         max-height: 154vw;
         z-index: 1;
-        background-color: pink;
     }
 
     .online-list {
@@ -580,15 +582,33 @@ button {
         background-color: #2b2727; 
     }
 
+    .online-list h3 {
+        margin-top: 48px;
+    }
+
     .online-list div {
         position: relative;
         width: 100%;
-        height: 60px;
+        height: 80px;
         margin-left: auto;
         transform: translateY(20vw);
         text-align: left;
+        line-height: 80px;
         background-color: transparent;
         cursor: pointer;
+    }
+
+    .online-list span {
+        margin-left: 4%;
+    }
+
+    .online-list img {
+        width: 40px;
+        height: 40px;
+        float: right;
+        margin-right: calc(50% - 20px);
+        margin-top: 20px;
+        background-color: transparent;
     }
     
     .close-video {
@@ -596,6 +616,7 @@ button {
         width: 40px;
         height: 40px;
         bottom: 0;
+        margin-bottom: 8vw;
         left: 50%;
         transform: translate(-50%, 0%);
         z-index: 1;
@@ -639,7 +660,7 @@ button {
         overflow: hidden;
         padding: 0px;
         box-sizing: border-box;
-        background-color: #363D48;
+        background-color: #2b2727;
         border-radius: 24px;
         color: #D5D4D4;
         text-align: center;
