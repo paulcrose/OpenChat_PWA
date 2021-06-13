@@ -256,7 +256,7 @@ div.input-container {
     pointer-events: none;
 }
 
-.navwrapper .close-video {
+/*.close-video {
         position: absolute;
         top: 0;
         right: 0;
@@ -266,7 +266,7 @@ div.input-container {
         height: 40px; 
         min-height: 40px;
         z-index: 1;
-}
+}*/
 
 button {
     cursor: pointer;
@@ -566,6 +566,7 @@ button {
         height: 100%;
         max-height: 154vw;
         z-index: 1;
+        background-color: pink;
     }
 
     .online-list {
@@ -590,15 +591,13 @@ button {
         cursor: pointer;
     }
     
-    .navwrapper .close-video {
+    .close-video {
         position: absolute;
+        width: 40px;
+        height: 40px;
         bottom: 0;
         left: 50%;
         transform: translate(-50%, 0%);
-        margin-bottom: 8vw;
-        width: 40px;
-        height: 12vw; 
-        min-height: 40px;
         z-index: 1;
     }
     
