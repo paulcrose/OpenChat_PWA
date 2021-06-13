@@ -161,6 +161,7 @@ const initWebRtcApp = () => {
         remoteVideo.classList.add(hide);
         chatInterface.classList.remove(hide);
         clearTimeout(noVideoTimeout);
+        removeFromOnlineUserList();
     };
 
     // Lists the online users in the UI and registers a call method to the click event
