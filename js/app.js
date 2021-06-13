@@ -397,7 +397,7 @@ function createUserListItem(userId, name) {
     div.id = userId;
 
     const img = document.createElement('img');
-    img.src = './phone.png';
+    img.src = '/images/call.svg';
 
     const span = document.createElement('span');
     span.innerHTML = name;
