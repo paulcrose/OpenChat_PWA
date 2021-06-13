@@ -616,7 +616,7 @@ button {
         width: 40px;
         height: 40px;
         bottom: 0;
-        margin-bottom: 8vw;
+        margin-bottom: 10vw;
         left: 50%;
         transform: translate(-50%, 0%);
         z-index: 1;
