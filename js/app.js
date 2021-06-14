@@ -309,7 +309,6 @@ function renderMessage(message) {
 function incomingCall(name) {
     return new Promise((resolve) => {
         acceptCallButton.onclick = function() {
-            background.classList.add(hide);
             remoteVideo.classList.remove(hide);
             incomingCallModal.classList.add(hide);
             closeWrapper.classList.remove(hide);
