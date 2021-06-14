@@ -136,6 +136,9 @@
   
   document.addEventListener('visibilitychange', function() {
     if (document.visibilityState === 'hidden') {
+      pubnub.unsubscribe({
+            channels: [globalChannel]
+        });
       //closeTab();
       //webRtcPhone.disconnect();
       //videoModal.classList.remove(hide);
