@@ -58,7 +58,7 @@ const rtcConfig = {};
 let username; // User's name in the app
 let myAudioVideoStream; // Local audio and video stream
 let noVideoTimeout; // Used for checking if a video connection succeeded
-const noVideoTimeoutMS = 5000; // Error alert if the video fails to connect
+const noVideoTimeoutMS = 3000; // Error alert if the video fails to connect
 
 // Xirsys API Info, not required for WebRTC, but it helps
 // Xirsys Network access tokens are issued via this PubNub Function
@@ -161,6 +161,7 @@ const initWebRtcApp = () => {
         remoteVideo.classList.add(hide);
         chatInterface.classList.remove(hide);
         clearTimeout(noVideoTimeout);
+        closeWrapper.classList.add(hide);
     };
 
     // Lists the online users in the UI and registers a call method to the click event
