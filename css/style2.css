@@ -117,8 +117,6 @@ h3 {
     max-width: 166vh;
     height: 100%;
     z-index: 4;
-    background-color: lightblue;
-    opacity: 0.5;
 }
 
 .online-list {
@@ -605,10 +603,10 @@ button {
     }
 
     .online-list img {
-        width: 40px;
-        height: 40px;
+        width: 48px;
+        height: 48px;
         float: right;
-        margin-right: calc(50% - 20px);
+        margin-right: calc(50% - 24px);
         margin-top: 20px;
         background-color: transparent;
     }
@@ -621,22 +619,20 @@ button {
         z-index: 7;
     }
     
-
-    
     button {
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translate(-50%, 0%);
-        margin-bottom: 36px;
+        margin-bottom: 24px;
         cursor: pointer;
         -webkit-appearance: none;
         appearance: none;
         outline: none;
         border: none;
         width: auto;
-          width: 40px;
-          height: 40px;
+          width: 48px;
+          height: 48px;
           background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/hangup.svg); 
           background-repeat: no-repeat; 
           background-color: transparent; 
