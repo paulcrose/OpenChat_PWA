@@ -311,7 +311,7 @@ function incomingCall(name) {
             background.classList.add(hide);
             remoteVideo.classList.remove(hide);
             incomingCallModal.classList.add(hide);
-            //closeVideoButton.classList.remove(hide);
+            closeWrapper.classList.remove(hide);
             chatInterface.classList.remove(hide);
             resolve(true);
         }
