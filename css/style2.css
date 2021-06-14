@@ -628,7 +628,7 @@ button {
         bottom: 0;
         left: 50%;
         transform: translate(-50%, 0%);
-        margin-bottom: 48px;
+        margin-bottom: 40px;
         cursor: pointer;
         -webkit-appearance: none;
         appearance: none;
