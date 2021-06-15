@@ -41,6 +41,7 @@
   "lang": "en-US",
   "start_url": "./index.html",
   "display": "standalone",
+  "display_override": ["tabbed"],
   "background_color": "#1e1a1a",
   "theme_color": "#1e1a1a"
 }
