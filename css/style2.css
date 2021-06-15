@@ -448,7 +448,7 @@ div.input-container {
 
 #accept-call {
     position: absolute;
-    width: 80px;
+    width: 84px;
     height: 40px;
     top: 50%;
     left: calc(50% - 64px);
@@ -464,7 +464,7 @@ div.input-container {
 
 #reject-call {
     position: absolute;
-    width: 80px;
+    width: 84px;
     height: 40px;
     top: 50%;
     left: calc(50% + 64px);
