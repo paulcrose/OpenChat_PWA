@@ -40,9 +40,12 @@ function storeName() {
 }
 
 
+
 if (localStorage.length > 0) {
     document.getElementById('welcome').innerHTML = "Welcome Back";
-    document.getElementById('phrase').style.display = "none";
+    document.getElementById('please').style.display = "none";
+    document.getElementById('username-input').innerHTML = localStorage.getItem("name");
+    document.getElementById('storedname').innerHTML = localStorage.getItem("name");
 }
 
 // PubNub Channel for sending/receiving global chat messages

@@ -362,19 +362,20 @@ div.input-container {
     max-height: 100%;
 }
 
+
 #username-input-modal p {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 172px;
+    margin-top: 132px;
     margin-bottom: 0;
     font-size: 22px;
     font-weight: 200;
 }
 
-#incoming-call-modal p, #call-confirm-modal p, #exit-confirm-modal p {
+#username-input-modal p:nth-of-type(2) {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 132px;
+    margin-top: 172px;
     margin-bottom: 0;
     font-size: 22px;
     font-weight: 200;
@@ -490,7 +491,8 @@ div.input-container {
     padding: 0px 5px;
     line-height: 40px;
     outline: none;
-    font-size: 14px;
+    font-size: 18px;
+    letter-spacing: 1px;
     border-style: hidden;
     background-color: #D5D4D4;
     border-radius: 16px;
@@ -681,16 +683,16 @@ div.input-container {
     #username-input-modal p {
         margin-left: 0;
         margin-right: 0;
-        margin-top: calc(50vw - 64px);
+        margin-top: calc(50vw - 80px);
         margin-bottom: 0;
         font-size: 22px;
         font-weight: 200;
     }
 
-    #incoming-call-modal p, #call-confirm-modal p, #exit-confirm-modal p {
+    #username-input-modal p:nth-of-type(2) {
         margin-left: 0;
         margin-right: 0;
-        margin-top: calc(50vw - 80px);
+        margin-top: calc(50vw - 64px);
         margin-bottom: 0;
         font-size: 22px;
         font-weight: 200;
