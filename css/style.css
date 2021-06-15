@@ -59,7 +59,7 @@
       position: absolute;
       width: 72px;
       height: 44px;
-      top: calc(58% + 168px);
+      top: calc(58% + 172px);
       left: 50%;
       transform: translate(-50%, -50%);
       background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/connect_word.svg); 
