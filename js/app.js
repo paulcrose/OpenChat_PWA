@@ -46,6 +46,7 @@ if (localStorage.length > 0) {
     document.getElementById('please').style.display = "none";
     document.getElementById('username-input').innerHTML = localStorage.getItem("name");
     document.getElementById('storedname').innerHTML = localStorage.getItem("name");
+    joinButton.classList.remove('disabled');
 }
 
 // PubNub Channel for sending/receiving global chat messages
