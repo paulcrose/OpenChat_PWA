@@ -363,7 +363,7 @@ div.input-container {
 }
 
 
-#user-input-modal p {
+.user-input-modal p {
     margin-left: 0;
     margin-right: 0;
     margin-top: 132px;
@@ -372,7 +372,7 @@ div.input-container {
     font-weight: 200;
 }
 
-#user-input-modal p:nth-of-type(2) {
+.user-input-modal p:nth-of-type(2) {
     margin-left: 0;
     margin-right: 0;
     margin-top: 172px;
@@ -683,7 +683,7 @@ div.input-container {
         text-align: center;
     }
 
-    #user-input-modal p {
+    .user-input-modal p {
         margin-left: 0;
         margin-right: 0;
         margin-top: calc(50vw - 80px);
@@ -692,7 +692,7 @@ div.input-container {
         font-weight: 200;
     }
 
-    #user-input-modal p:nth-of-type(2) {
+    .user-input-modal p:nth-of-type(2) {
         margin-left: 0;
         margin-right: 0;
         margin-top: calc(50vw - 64px);
