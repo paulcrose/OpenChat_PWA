@@ -35,10 +35,15 @@ const messageInput = document.getElementById('message-input');
 const submit = document.getElementById('submit');
 const hide = 'hide';
 
+var noUser = setInterval(noUserTimeout, 10000);
+
+function noUserTimeout() {
+    window.history.back();
+}
+
 function storeName() {
     localStorage.setItem("name", document.getElementById("username-input").value);
 }
-
 
 
 if (localStorage.length > 0) {
@@ -373,6 +378,7 @@ function getLocalUserName() {
             const nameLength = usernameInput.value.length;
             if (nameLength > 0) {
                 resolve(usernameInput.value);
+                clearTimeout(noUser);
             }
         });
     });
