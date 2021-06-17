@@ -1,12 +1,8 @@
 const chatInterface = document.getElementById('chat-interface');
-const myVideoSample = document.getElementById('my-video-sample');
 const myVideo = document.getElementById('my-video');
 const remoteVideo = document.getElementById('remote-video');
 const videoModal = document.getElementById('video-modal');
 const closeVideoButton = document.getElementById('close-video');
-
-const brokenMyVideo = document.getElementById('broken-my-video');
-const brokenSampleVideo = document.getElementById('broken-sample-video');
 
 const usernameModal = document.getElementById('username-input-modal');
 const usernameInput = document.getElementById('username-input');
@@ -78,11 +74,9 @@ request(turnApiUrl, 'GET').then((response) => { turnToken = response });
 // Init the audio and video stream on this client
 getLocalStream().then((localMediaStream) => {
     myAudioVideoStream = localMediaStream;
-    myVideoSample.srcObject = myAudioVideoStream;
     myVideo.srcObject = myAudioVideoStream;
 }).catch(() => {
     myVideo.classList.add(hide);
-    myVideoSample.classList.add(hide);
     brokenMyVideo.classList.remove(hide);
     brokenSampleVideo.classList.remove(hide);
 });
