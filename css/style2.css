@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
     width: 100%;
     max-width: 100vw;
     height: 100%;
@@ -18,7 +17,7 @@ body {
     background-color: #1E1A1A;
 }
 
-body > div {
+body>div {
     width: inherit;
     height: inherit;
 }
@@ -125,10 +124,9 @@ h3 {
     margin-right: 7.5vh;
     margin-top: 10vh;
     width: 28.5vh;
-    height: 50vh;  
-    background-color: #2b2727; 
+    height: 50vh;
+    background-color: #2b2727;
     border-radius: 24px;
-    
 }
 
 .online-list h3 {
@@ -292,10 +290,10 @@ div.input-container {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/hangup.svg); 
-    background-repeat: no-repeat; 
-    background-color: transparent; 
-} 
+    background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/hangup.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
 
 .video-modal img {
     position: absolute;
@@ -318,7 +316,7 @@ div.input-container {
     position: absolute;
     margin-top: 10vh;
     width: 19vh;
-    height: 19vh;   
+    height: 19vh;
     object-fit: cover;
     border-radius: 24px;
 }
@@ -361,7 +359,6 @@ div.input-container {
     height: 100%;
     max-height: 100%;
 }
-
 
 .user-input-modal p {
     margin-left: 0;
@@ -406,12 +403,12 @@ div.input-container {
     left: 50%;
     transform: translateX(-50%);
     background-color: transparent;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     outline: none;
     border: none;
     user-select: none;
     cursor: pointer;
-    background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/join.svg); 
+    background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/join.svg);
 }
 
 #yes-call, #yes-exit {
@@ -422,7 +419,7 @@ div.input-container {
     left: calc(50% - 56px);
     transform: translateX(-50%);
     background-color: transparent;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     outline: none;
     border: none;
     user-select: none;
@@ -438,7 +435,7 @@ div.input-container {
     left: calc(50% + 56px);
     transform: translateX(-50%);
     background-color: transparent;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     outline: none;
     border: none;
     user-select: none;
@@ -454,7 +451,7 @@ div.input-container {
     left: calc(50% - 64px);
     transform: translateX(-50%);
     background-color: transparent;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     outline: none;
     border: none;
     user-select: none;
@@ -470,7 +467,7 @@ div.input-container {
     left: calc(50% + 64px);
     transform: translateX(-50%);
     background-color: transparent;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     outline: none;
     border: none;
     user-select: none;
@@ -502,16 +499,13 @@ div.input-container {
 }
 
 .chat-interface {
-    
     overflow: hidden;
 }
 
 @media only screen and (max-width: 700px) {
-
     h1 {
         font-size: 20px
     }
-
     h3 {
         position: absolute;
         width: 100%;
@@ -522,16 +516,13 @@ div.input-container {
         color: #25C8FF;
         text-align: center;
     }
-
     html, body {
         font-size: 16px;
         background-color: #1E1A1A;
     }
-
     #background {
         display: none;
     }
-
     .localwrapper {
         position: absolute;
         width: 100%;
@@ -539,18 +530,16 @@ div.input-container {
         max-height: 100%;
         z-index: 4;
     }
-
     .video-modal video.me {
         position: absolute;
         margin-top: 4vw;
         margin-left: 6vw;
         margin-right: auto;
         width: 24vw;
-        height: 24vw;   
+        height: 24vw;
         object-fit: cover;
         border-radius: 16px;
     }
-
     .remotewrapper {
         position: absolute;
         margin-left: 0;
@@ -562,18 +551,16 @@ div.input-container {
         max-height: 154vw;
         z-index: 3;
     }
-
     .video-modal video.remote {
         position: absolute;
         bottom: 0%;
         margin-bottom: 26vw;
         width: 100%;
         height: 96vw;
-        min-height: 96vw;   
+        min-height: 96vw;
         object-fit: cover;
-        border-radius: 24px;   
+        border-radius: 24px;
     }
-
     .navwrapper {
         position: absolute;
         width: 100%;
@@ -581,22 +568,19 @@ div.input-container {
         max-height: 154vw;
         z-index: 2;
     }
-
     .online-list {
         position: absolute;
         bottom: 0%;
         margin-bottom: 26vw;
         width: 100%;
         height: 96vw;
-        min-height: 96vw; 
-        border-radius: 24px; 
-        background-color: #2b2727; 
+        min-height: 96vw;
+        border-radius: 24px;
+        background-color: #2b2727;
     }
-
     .online-list h3 {
         margin-top: 48px;
     }
-
     .online-list div {
         position: relative;
         width: 100%;
@@ -608,13 +592,11 @@ div.input-container {
         background-color: transparent;
         cursor: pointer;
     }
-
     .online-list span {
         width: 50%;
         text-align: right;
         padding-left: 0%;
     }
-
     .online-list img {
         width: 48px;
         height: 48px;
@@ -624,7 +606,6 @@ div.input-container {
         margin-top: 20px;
         background-color: transparent;
     }
-
     #closewrapper {
         position: absolute;
         width: 100%;
@@ -632,7 +613,6 @@ div.input-container {
         max-height: 154vw;
         z-index: 7;
     }
-
     .close-video {
         position: absolute;
         width: 48px;
@@ -643,29 +623,24 @@ div.input-container {
         margin-bottom: 24px;
         margin-top: 0px;
     }
-    
     #exit {
         width: 48px;
         height: 48px;
         cursor: pointer;
-        background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/hangup.svg); 
-        background-repeat: no-repeat; 
-        background-color: transparent; 
-        
-    } 
-
-    .modal-spacer {
-            position: absolute;
-            margin-left: 0;
-            margin-right: 0;
-            margin-top: 0;
-            margin-bottom: 0;
-            width: 100%;
-            height: 100%;
-            max-height: 154vw;
-            
+        background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/hangup.svg);
+        background-repeat: no-repeat;
+        background-color: transparent;
     }
-
+    .modal-spacer {
+        position: absolute;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 154vw;
+    }
     .user-input-modal {
         position: absolute;
         bottom: 0%;
@@ -673,7 +648,7 @@ div.input-container {
         margin-bottom: 26vw;
         width: 100%;
         height: 96vw;
-        min-height: 96vw;   
+        min-height: 96vw;
         overflow: hidden;
         padding: 0px;
         box-sizing: border-box;
@@ -682,7 +657,6 @@ div.input-container {
         color: #D5D4D4;
         text-align: center;
     }
-
     .user-input-modal p {
         margin-left: 0;
         margin-right: 0;
@@ -691,7 +665,6 @@ div.input-container {
         font-size: 22px;
         font-weight: 200;
     }
-
     .user-input-modal p:nth-of-type(2) {
         margin-left: 0;
         margin-right: 0;
@@ -700,7 +673,6 @@ div.input-container {
         font-size: 22px;
         font-weight: 200;
     }
-    
     #join-button {
         position: absolute;
         height: 40px;
@@ -708,16 +680,15 @@ div.input-container {
         left: 50%;
         transform: translateX(-50%);
         margin-top: 64px;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         outline: none;
         border: none;
         user-select: none;
         cursor: pointer;
-        background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/join.svg); 
-        background-repeat: no-repeat; 
-        background-color: transparent; 
+        background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/join.svg);
+        background-repeat: no-repeat;
+        background-color: transparent;
     }
-
     #yes-call, #yes-exit {
         position: absolute;
         width: 56px;
@@ -725,14 +696,13 @@ div.input-container {
         top: 50%;
         left: calc(50% - 56px);
         transform: translateX(-50%);
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         outline: none;
         border: none;
         user-select: none;
         cursor: pointer;
         background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/yes.svg);
     }
-    
     #no-call, #no-exit {
         position: absolute;
         width: 56px;
@@ -740,14 +710,13 @@ div.input-container {
         top: 50%;
         left: calc(50% + 56px);
         transform: translateX(-50%);
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         outline: none;
         border: none;
         user-select: none;
         cursor: pointer;
         background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/no.svg);
     }
-
     #accept-call {
         position: absolute;
         width: 80px;
@@ -755,14 +724,13 @@ div.input-container {
         top: 50%;
         left: calc(50% - 64px);
         transform: translateX(-50%);
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         outline: none;
         border: none;
         user-select: none;
         cursor: pointer;
         background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/accept.svg);
     }
-    
     #reject-call {
         position: absolute;
         width: 80px;
@@ -770,13 +738,11 @@ div.input-container {
         top: 50%;
         left: calc(50% + 64px);
         transform: translateX(-50%);
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         outline: none;
         border: none;
         user-select: none;
         cursor: pointer;
         background-image: url(https://paulcrose.github.io/OpenChat_PWA/images/reject.svg);
     }
-
 }
-

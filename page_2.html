@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>OpenChat</title>
@@ -9,25 +10,25 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="images/OpenChat-icon-152.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="white"/>
+  <meta name="theme-color" content="white" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="OpenChat">
   <meta name="msapplication-TileImage" content="images/OpenChat-icon-144.png">
   <meta name="msapplication-TileColor" content="#D5D4D4">
 </head>
-<body>
 
-  <div id= "background"></div>
+<body>
+  <div id="background"></div>
 
   <div id="username-input-modal" class="modal-background">
     <div class="modal-spacer">
       <div class="user-input-modal">
         <h3 id="welcome">Welcome to OpenChat</h3>
-          <p id="storedname"></p>
-           <p id="please">Please enter a username</p>
-          <input id="username-input" type="text" maxlength="16" class="modal-text-input" autocomplete="off">
-          <div id="join-button" class="modal-button disabled"></div>
+        <p id="storedname"></p>
+        <p id="please">Please enter a username</p>
+        <input id="username-input" type="text" maxlength="16" class="modal-text-input" autocomplete="off">
+        <div id="join-button" class="modal-button disabled"></div>
       </div>
     </div>
   </div>
@@ -35,12 +36,12 @@
   <div id="incoming-call-modal" class="modal-background hide">
     <div class="modal-spacer">
       <div class="user-input-modal">
-          <h3>Incoming Call</h3>
-          <p>
-              From user <b id="call-from"></b>
-          </p>
-          <div id="accept-call" class="modal-button"></div>
-          <div id="reject-call" class="modal-button"></div>
+        <h3>Incoming Call</h3>
+        <p>
+          From user <b id="call-from"></b>
+        </p>
+        <div id="accept-call" class="modal-button"></div>
+        <div id="reject-call" class="modal-button"></div>
       </div>
     </div>
   </div>
@@ -48,12 +49,12 @@
   <div id="call-confirm-modal" class="modal-background hide">
     <div class="modal-spacer">
       <div class="user-input-modal">
-          <h3>Video Call</h3>
-          <p>
-              Call user <b id="call-confirm-username"></b>?
-          </p>
-          <div id="yes-call" class="modal-button"></div>
-          <div id="no-call" class="modal-button"></div>
+        <h3>Video Call</h3>
+        <p>
+          Call user <b id="call-confirm-username"></b>?
+        </p>
+        <div id="yes-call" class="modal-button"></div>
+        <div id="no-call" class="modal-button"></div>
       </div>
     </div>
   </div>
@@ -61,38 +62,36 @@
   <div id="exit-confirm-modal" class="modal-background hide">
     <div class="modal-spacer">
       <div class="user-input-modal">
-        <p>Exit Call?
+        <p>
+          Exit Call?
         </p>
         <div id="yes-exit" class="modal-button"></div>
         <div id="no-exit" class="modal-button"></div>
       </div>
     </div>
-</div>
+  </div>
 
   <div id="video-modal" class="video-modal">
-      <div class="remotewrapper">
+    <div class="remotewrapper">
       <video id="remote-video" class="remote" playsinline autoplay muted></video>
-      </div>
-      <div class="localwrapper">
+    </div>
+    <div class="localwrapper">
       <video class="me" id="my-video" playsinline autoplay muted poster="images/background.png"></video>
-
-      </div>
+    </div>
   </div>
 
   <div id="chat-interface" class="chat-interface">
-
-      <div class="navwrapper">
+    <div class="navwrapper">
       <div id="online-list" class="online-list">
         <h3 id="welcome">Online Now</h3>
       </div>
-      </div>
-      <div id= "closewrapper" class="closewrapper hide">
+    </div>
+    <div id="closewrapper" class="closewrapper hide">
       <div id="close-video" class="close-video">
         <div id="exit"></div>
       </div>
-      </div>  
+    </div>
   </div>
-
 </body>
 
 <script type="text/javascript" src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
@@ -103,18 +102,17 @@
   function goHome() {
     window.history.back();
   }
-  
-  document.addEventListener('visibilitychange', function() {
+
+  document.addEventListener('visibilitychange', function () {
     if (document.visibilityState === 'hidden') {
       pubnub.unsubscribe({
-            channels: [globalChannel]
-        });
+        channels: [globalChannel]
+      });
       webRtcPhone.disconnect();
       goHome();
     }
   });
-  
- </script>
+
+</script>
 
 </html>
-

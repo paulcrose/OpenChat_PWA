@@ -164,7 +164,7 @@ const initWebRtcApp = () => {
 
         if (alreadyInList) {
             removeFromOnlineUserList(occupant.uuid);
-        } 
+        }
 
         if (isMe) {
             return;
@@ -198,19 +198,19 @@ const initWebRtcApp = () => {
     };
 
     pubnub = new PubNub({
-        publishKey : 'pub-c-2686b5ba-48ee-48c1-91c4-c0efe92d8668',
-        subscribeKey : 'sub-c-33a3173c-adcc-11eb-9bc5-9690213e5a9f'
+        publishKey: 'pub-c-2686b5ba-48ee-48c1-91c4-c0efe92d8668',
+        subscribeKey: 'sub-c-33a3173c-adcc-11eb-9bc5-9690213e5a9f'
     });
 
     // This PubNub listener powers the user list population.
     pubnub.addListener({
-        message: function(event) {
+        message: function (event) {
             // Render a global chat message in the UI
             if (event.channel === globalChannel) {
                 renderMessage(event);
             }
         },
-        status: function(statusEvent) {
+        status: function (statusEvent) {
             if (statusEvent.category === "PNConnectedCategory") {
                 pubnub.setState({
                     state: {
@@ -225,10 +225,10 @@ const initWebRtcApp = () => {
                     includeUUIDs: true,
                     includeState: true
                 },
-                (status, response) => {
-                    response.channels[globalChannel].occupants
-                        .forEach(addToOnlineUserList);
-                });
+                    (status, response) => {
+                        response.channels[globalChannel].occupants
+                            .forEach(addToOnlineUserList);
+                    });
             }
         },
         presence: (status, response) => {
@@ -283,7 +283,7 @@ const initWebRtcApp = () => {
 
 function incomingCall(name) {
     return new Promise((resolve) => {
-        acceptCallButton.onclick = function() {
+        acceptCallButton.onclick = function () {
             remoteVideo.classList.remove(hide);
             incomingCallModal.classList.add(hide);
             closeWrapper.classList.remove(hide);
@@ -291,7 +291,7 @@ function incomingCall(name) {
             resolve(true);
         }
 
-        rejectCallButton.onclick = function() {
+        rejectCallButton.onclick = function () {
             incomingCallModal.classList.add(hide);
             resolve(false);
         }
@@ -303,14 +303,14 @@ function incomingCall(name) {
 
 function confirmCall(name) {
     return new Promise((resolve) => {
-        yesCallButton.onclick = function() {
+        yesCallButton.onclick = function () {
             remoteVideo.classList.remove(hide);
             callConfirmModal.classList.add(hide);
             closeWrapper.classList.remove(hide);
             resolve(true);
         }
 
-        noCallButton.onclick = function() {
+        noCallButton.onclick = function () {
             callConfirmModal.classList.add(hide);
             resolve(false);
         }
@@ -353,18 +353,18 @@ function getLocalUserName() {
 function getLocalStream() {
     return new Promise((resolve, reject) => {
         navigator.mediaDevices
-        .getUserMedia({
-            audio: true,
-            video: true
-        })
-        .then((avStream) => {
-            resolve(avStream);
-        })
-        .catch((err) => {
-            alert('Cannot access local camera or microphone.');
-            console.error(err);
-            reject();
-        });
+            .getUserMedia({
+                audio: true,
+                video: true
+            })
+            .then((avStream) => {
+                resolve(avStream);
+            })
+            .catch((err) => {
+                alert('Cannot access local camera or microphone.');
+                console.error(err);
+                reject();
+            });
     });
 }
 
@@ -394,10 +394,10 @@ function createUserListItem(userId, name) {
 // Sorts sibling HTML elements based on an attribute value
 function sortNodeChildren(parent, attribute) {
     const length = parent.children.length;
-    for (let i = 0; i < length-1; i++) {
-        if (parent.children[i+1][attribute] < parent.children[i][attribute]) {
-            parent.children[i+1].parentNode
-                .insertBefore(parent.children[i+1], parent.children[i]);
+    for (let i = 0; i < length - 1; i++) {
+        if (parent.children[i + 1][attribute] < parent.children[i][attribute]) {
+            parent.children[i + 1].parentNode
+                .insertBefore(parent.children[i + 1], parent.children[i]);
             i = -1;
         }
     }
@@ -444,7 +444,7 @@ function request(url, method, options) {
             xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         }
 
-        xhr.onload = function() {
+        xhr.onload = function () {
             if (xhr.status >= 200 && xhr.status < 300) {
                 let response;
                 try {
