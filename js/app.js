@@ -27,7 +27,7 @@ const closeWrapper = document.getElementById('closewrapper');
 const onlineList = document.getElementById('online-list');
 const hide = 'hide';
 
-var noUser = setInterval(noUserTimeout, 10000);
+var noUser = setInterval(noUserTimeout, 20000);
 
 function noUserTimeout() {
     window.history.back();
