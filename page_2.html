@@ -129,17 +129,17 @@
 <script src="js/app.js" type="text/javascript"></script>
 <script>
 
-  function closeTab() { 
-    window.close(); 
-  } 
+  function goHome() {
+    window.history.back();
+  }
   
   document.addEventListener('visibilitychange', function() {
     if (document.visibilityState === 'hidden') {
       pubnub.unsubscribe({
             channels: [globalChannel]
         });
-      closeTab();
       webRtcPhone.disconnect();
+      goHome();
     }
   });
   
