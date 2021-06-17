@@ -25,10 +25,6 @@ const noExitButton = document.getElementById('no-exit');
 const closeWrapper = document.getElementById('closewrapper');
 
 const onlineList = document.getElementById('online-list');
-const chat = document.getElementById('chat');
-const log = document.getElementById('log');
-const messageInput = document.getElementById('message-input');
-const submit = document.getElementById('submit');
 const hide = 'hide';
 
 var noUser = setInterval(noUserTimeout, 10000);
@@ -88,18 +84,6 @@ getLocalUserName().then((myUsername) => {
     initWebRtcApp();
 });
 
-// Send a chat message when Enter key is pressed
-messageInput.addEventListener('keydown', (event) => {
-    if (event.keyCode === 13 && !event.shiftKey) {
-        event.preventDefault();
-        sendMessage();
-        return;
-    }
-});
-
-// Send a chat message when the submit button is clicked
-submit.addEventListener('click', sendMessage);
-
 const exitConfirmEventHandler = (event) => {
     exitConfirmModal.classList.remove(hide);
 }
@@ -138,9 +122,7 @@ const initWebRtcApp = () => {
         incomingCall(username).then((acceptedCall) => {
             if (acceptedCall) {
                 // End an already open call before opening a new one
-                //webRtcPhone.disconnect();
                 videoModal.classList.remove(hide);
-                //chatInterface.classList.add(hide);
                 noVideoTimeout = setTimeout(noVideo, noVideoTimeoutMS);
             }
 
@@ -168,7 +150,7 @@ const initWebRtcApp = () => {
     };
 
     // Lists the online users in the UI and registers a call method to the click event
-    //     When a user clicks a peer's name in the online list, the app calls that user.
+    // When a user clicks a peer's name in the online list, the app calls that user.
     const addToOnlineUserList = (occupant) => {
         const userId = occupant.uuid;
         const name = occupant.state ? occupant.state.name : null;
@@ -220,7 +202,7 @@ const initWebRtcApp = () => {
         subscribeKey : 'sub-c-33a3173c-adcc-11eb-9bc5-9690213e5a9f'
     });
 
-    // This PubNub listener powers the text chat and online user list population.
+    // This PubNub listener powers the user list population.
     pubnub.addListener({
         message: function(event) {
             // Render a global chat message in the UI
@@ -298,16 +280,6 @@ const initWebRtcApp = () => {
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 // UI Render Functions
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-function renderMessage(message) {
-    const messageDomNode = createMessageHTML(message);
-
-    log.append(messageDomNode);
-
-    // Sort messages in chat log based on their timetoken (value of DOM id)
-    sortNodeChildren(log, 'id');
-
-    chat.scrollTop = chat.scrollHeight;
-}
 
 function incomingCall(name) {
     return new Promise((resolve) => {
@@ -412,46 +384,12 @@ function createUserListItem(userId, name) {
     return div;
 }
 
-function createMessageHTML(messageEvent) {
-    const text = messageEvent.message.text;
-    const jsTime = parseInt(messageEvent.timetoken.substring(0,13));
-    const dateString = new Date(jsTime).toLocaleString();
-    const senderUuid = messageEvent.publisher;
-    const senderName = senderUuid === pubnub.getUUID()
-        ? username
-        : document.getElementById(senderUuid).children[1].innerText;
-
-    const div = document.createElement('div');
-    const b = document.createElement('b');
-
-    div.id = messageEvent.timetoken;
-    b.innerHTML = `${senderName} (${dateString}): `;
-
-    div.appendChild(b);
-    div.innerHTML += text;
-
-    return div;
-}
 
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 // Utility Functions
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-function sendMessage() {
-    const messageToSend = messageInput.value.replace(/\r?\n|\r/g, '');
-    const trimmed = messageToSend.replace(/(\s)/g, '');
 
-    if (trimmed.length > 0) {
-        pubnub.publish({
-            channel: globalChannel,
-            message: {
-                text: messageToSend
-            }
-        });
-    }
-
-    messageInput.value = '';
-}
 
 // Sorts sibling HTML elements based on an attribute value
 function sortNodeChildren(parent, attribute) {
